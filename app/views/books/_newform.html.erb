@@ -1,4 +1,9 @@
+<% flash.each do |message_type, message| %>
+	<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+<% end %>
+
 <%= form_for(book) do |f| %>
+
 	<div class="field row">
 		<%= f.label :title %>
 		<%= f.text_field :title, class: "col-xs-12 book_title" %>
